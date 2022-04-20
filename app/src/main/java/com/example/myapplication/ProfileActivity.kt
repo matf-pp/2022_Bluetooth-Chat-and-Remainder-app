@@ -15,7 +15,6 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBar
 import androidx.core.app.ActivityCompat
 import com.example.myapplication.databinding.ActivityProfileBinding
-import com.example.myapplication.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
 
 
@@ -28,24 +27,7 @@ class ProfileActivity : AppCompatActivity() {
 
     //FB auth
     private lateinit var firebaseAuth: FirebaseAuth
-    @SuppressLint("MissingPermission")
-    @RequiresApi(Build.VERSION_CODES.M)
-    override fun onStart() {
-        super.onStart()
-        val bluetoothManager: BluetoothManager = getSystemService(BluetoothManager::class.java)
-        val bluetoothAdapter: BluetoothAdapter? = bluetoothManager.getAdapter()
-        if (bluetoothAdapter == null) {
-            // Device doesn't support Bluetooth
-            Toast.makeText(this, "Bluetooth is not available!", Toast.LENGTH_SHORT).show()
-            finish() //automatic close app if Bluetooth service is not available!
-        }
-        if (bluetoothAdapter?.isEnabled == false) {
-            val enableBtIntent = Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE)
-            startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT)
-        }
 
-
-    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityProfileBinding.inflate(layoutInflater)
@@ -60,6 +42,12 @@ class ProfileActivity : AppCompatActivity() {
         binding.logoutBtn.setOnClickListener {
             firebaseAuth.signOut()
             checkUser()
+        }
+        binding.notificationBtn.setOnClickListener {
+            startActivity(Intent(this,NotificationActivity::class.java))
+        }
+        binding.chatBtn.setOnClickListener {
+            startActivity(Intent(this,ChatActivity::class.java))
         }
     }
 

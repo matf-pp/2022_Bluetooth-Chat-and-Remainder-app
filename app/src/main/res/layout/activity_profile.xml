@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,21 +8,69 @@
     android:padding="20dp"
     android:gravity="center"
     tools:context=".ProfileActivity">
+
     <TextView
+        android:id="@+id/first"
+        style="@style/TextAppearance.MaterialComponents.Caption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="You are logged in as"
-        style="@style/TextAppearance.MaterialComponents.Caption"/>
+        android:layout_centerHorizontal="true"
+        android:text="You are logged in as" />
     <TextView
         android:id="@+id/emailTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/first"
         android:text="Email"
         style="@style/TextAppearance.AppCompat.Body1"/>
+
+    <TextView
+        android:id="@+id/addrem"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailTv"
+        android:layout_marginTop="43dp"
+        android:layout_centerHorizontal="true"
+        android:text="To add a remainder click hear:"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/notificationBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailTv"
+        android:layout_marginTop="80dp"
+        android:padding="5dp"
+        android:text="Add remainder" />
+    <TextView
+        android:id="@+id/addchat"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notificationBtn"
+        android:layout_marginTop="43dp"
+        android:layout_centerHorizontal="true"
+        android:text="To connect and chat with your firends click here:"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/chatBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addchat"
+        android:layout_marginTop="37dp"
+        android:padding="5dp"
+        android:text="Connect and chat" />
+
     <Button
         android:id="@+id/logoutBtn"
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Logout"/>
-</LinearLayout>
+        android:text="Logout"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
