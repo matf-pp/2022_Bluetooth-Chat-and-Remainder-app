@@ -1,17 +1,19 @@
 package com.example.myapplication
 
-import android.app.AlarmManager
-import android.app.PendingIntent
+import android.app.*
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.service.controls.ControlsProviderService.TAG
+import android.util.Log
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityNotificationBinding
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.messaging.FirebaseMessaging
 import java.util.*
-
 
 
 private var notificationId = 1
@@ -31,46 +33,51 @@ class NotificationActivity : AppCompatActivity() {
         actionBar.title="Profile"
 
         binding.setBtn.setOnClickListener {
-            set()
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                set()
+            }
         }
         binding.cancelBtn.setOnClickListener {
             cancel()
         }
     }
-    @RequiresApi(Build.VERSION_CODES.M)
-    private fun set()
-    {
-        var notification = binding.editTask.text.toString()
-        var time=binding.timePicker
-        var intent=Intent(this,AlarmReceiver::class.java)
-        intent.putExtra("notificationId", notificationId)
-        intent.putExtra("message",notification)
+   // @RequiresApi(Build.VERSION_CODES.M)
+    @RequiresApi(Build.VERSION_CODES.O)
 
-        var pendingIntent = PendingIntent.getBroadcast(this,0,intent,PendingIntent.FLAG_CANCEL_CURRENT)
-
-        val alarm: AlarmManager? = getSystemService(ALARM_SERVICE) as AlarmManager?
-
-        var hour = time.hour
-        var minute = time.minute
-
-        //Create time
-        var start = Calendar.getInstance()
-        start.set(Calendar.HOUR_OF_DAY,hour)
-        start.set(Calendar.MINUTE,minute)
-        start.set(Calendar.SECOND,0)
-        var alarmStart = start.timeInMillis
-
-        //setAlarm
-        if (alarm != null) {
-            alarm.set(AlarmManager.RTC_WAKEUP,alarmStart,pendingIntent)
-            Toast.makeText(this,"Done!",Toast.LENGTH_SHORT).show()
-            finish()
-        }
-        else
+        private fun set()
         {
-            Toast.makeText(this,"Alarm wasn't set!",Toast.LENGTH_SHORT).show()
-            finish()
-        }
+            var notification = binding.editTask.text.toString()
+            var time=binding.timePicker
+            var intent=Intent(this,AlarmReceiver::class.java)
+            intent.putExtra("notificationId", notificationId)
+            intent.putExtra("message",notification)
+
+            var pendingIntent = PendingIntent.getBroadcast(this,0,intent,PendingIntent.FLAG_CANCEL_CURRENT)
+
+            val alarm: AlarmManager? = getSystemService(ALARM_SERVICE) as AlarmManager?
+
+            var hour = time.hour
+            var minute = time.minute
+
+            //Create time
+            var start = Calendar.getInstance()
+            start.set(Calendar.HOUR_OF_DAY,hour)
+            start.set(Calendar.MINUTE,minute)
+            start.set(Calendar.SECOND,0)
+            var alarmStart = start.timeInMillis
+
+            //setAlarm
+            if (alarm != null) {
+                alarm.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP,alarmStart,pendingIntent)
+                Toast.makeText(this,"Done!",Toast.LENGTH_SHORT).show()
+                finish()
+            }
+            else
+            {
+                Toast.makeText(this,"Alarm wasn't set!",Toast.LENGTH_SHORT).show()
+                finish()
+            }
+
 
     }
     private fun cancel()
@@ -78,4 +85,6 @@ class NotificationActivity : AppCompatActivity() {
         Toast.makeText(this,"Canceled.",Toast.LENGTH_SHORT).show()
         finish()
     }
+    var CHANNEL_ID = "CHANNEL_SAMPLE"
+
 }

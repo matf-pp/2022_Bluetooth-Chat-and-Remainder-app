@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Bluetooth Chat and Remainder</string>
     <string name="no_account">Not have account? <b>SignUp</b></string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.R
 import android.annotation.SuppressLint
 import android.app.Notification
 import android.app.NotificationChannel
@@ -9,12 +10,12 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.os.Build
-import android.provider.Settings.Global.getString
+import android.widget.RemoteViews
 import androidx.core.app.NotificationCompat
-import androidx.core.content.ContextCompat.getSystemService
+import androidx.legacy.content.WakefulBroadcastReceiver
 
 
-public class AlarmReceiver : BroadcastReceiver() {
+public class AlarmReceiver : WakefulBroadcastReceiver() {
     var CHANNEL_ID = "CHANNEL_SAMPLE"
     @SuppressLint("ServiceCast")
     override fun onReceive(context: Context?, intent: Intent?) {
@@ -34,7 +35,7 @@ public class AlarmReceiver : BroadcastReceiver() {
             notman?.createNotificationChannel(channel)
         }
         val builder: NotificationCompat.Builder = NotificationCompat.Builder(context,CHANNEL_ID) as NotificationCompat.Builder
-        builder?.setSmallIcon(R.drawable.ic_baseline_notifications_active_24)
+        builder?.setSmallIcon(R.drawable.ic_dialog_info)
             ?.setContentTitle("It's time!")
             ?.setContentText(message)
             ?.setWhen(System.currentTimeMillis())
