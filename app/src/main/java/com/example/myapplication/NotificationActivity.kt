@@ -1,18 +1,15 @@
 package com.example.myapplication
 
-import android.app.*
+import android.app.AlarmManager
+import android.app.PendingIntent
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.service.controls.ControlsProviderService.TAG
-import android.util.Log
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityNotificationBinding
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.firebase.messaging.FirebaseMessaging
 import java.util.*
 
 
@@ -20,8 +17,18 @@ private var notificationId = 1
 
 class NotificationActivity : AppCompatActivity() {
 
+    companion object{
+        var minutes: List<Int> = ArrayList(25)
+        var alarmManagers = arrayOfNulls<AlarmManager>(25)
+        var intents = arrayOfNulls<PendingIntent>(25)
+        var info = 0
+
+    }
+
+
     private lateinit var binding: ActivityNotificationBinding
     private lateinit var actionBar: ActionBar
+
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,15 +53,19 @@ class NotificationActivity : AppCompatActivity() {
 
         private fun set()
         {
+
             var notification = binding.editTask.text.toString()
             var time=binding.timePicker
-            var intent=Intent(this,AlarmReceiver::class.java)
-            intent.putExtra("notificationId", notificationId)
-            intent.putExtra("message",notification)
+            if(NotificationActivity.info == 25)
+                NotificationActivity.info = 0
+            intent=Intent(this,AlarmReceiver::class.java)
+            intent?.putExtra("notificationId", notificationId)
+            intent?.putExtra("message",notification)
 
-            var pendingIntent = PendingIntent.getBroadcast(this,0,intent,PendingIntent.FLAG_CANCEL_CURRENT)
 
-            val alarm: AlarmManager? = getSystemService(ALARM_SERVICE) as AlarmManager?
+            var pendingIntent = PendingIntent.getBroadcast(this,info,intent,0)
+
+            NotificationActivity.alarmManagers[info] = getSystemService(ALARM_SERVICE) as AlarmManager?
 
             var hour = time.hour
             var minute = time.minute
@@ -67,17 +78,18 @@ class NotificationActivity : AppCompatActivity() {
             var alarmStart = start.timeInMillis
 
             //setAlarm
-            if (alarm != null) {
-                alarm.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP,alarmStart,pendingIntent)
+            if (alarmManagers[info] != null) {
+                alarmManagers[info]?.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP,alarmStart,pendingIntent)
                 Toast.makeText(this,"Done!",Toast.LENGTH_SHORT).show()
                 finish()
+                intents[info]=pendingIntent
+                info = info + 1
             }
             else
             {
                 Toast.makeText(this,"Alarm wasn't set!",Toast.LENGTH_SHORT).show()
                 finish()
             }
-
 
     }
     private fun cancel()

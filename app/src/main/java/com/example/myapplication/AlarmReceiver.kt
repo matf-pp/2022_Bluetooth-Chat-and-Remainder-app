@@ -2,17 +2,13 @@ package com.example.myapplication
 
 import android.R
 import android.annotation.SuppressLint
-import android.app.Notification
-import android.app.NotificationChannel
-import android.app.NotificationManager
-import android.app.PendingIntent
-import android.content.BroadcastReceiver
+import android.app.*
 import android.content.Context
 import android.content.Intent
 import android.os.Build
-import android.widget.RemoteViews
 import androidx.core.app.NotificationCompat
 import androidx.legacy.content.WakefulBroadcastReceiver
+import java.util.*
 
 
 public class AlarmReceiver : WakefulBroadcastReceiver() {
@@ -21,15 +17,15 @@ public class AlarmReceiver : WakefulBroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
         var notificationId = intent?.getIntExtra("notificationId",0)
         var message = intent?.getStringExtra("message")
-
+        var x = generateRandom()
         var mainIntent = Intent(context,ProfileActivity::class.java)
-        var contentIntent = PendingIntent.getActivity(context,0,mainIntent,0)
+        var contentIntent = PendingIntent.getActivity(context,x,mainIntent,PendingIntent.FLAG_UPDATE_CURRENT)
 
         val notman = context?.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
         {
             var channel_name = "My notification"
-            var importance = NotificationManager.IMPORTANCE_DEFAULT
+            var importance = NotificationManager.IMPORTANCE_HIGH
 
             val channel: NotificationChannel = NotificationChannel(CHANNEL_ID,channel_name,importance) as NotificationChannel
             notman?.createNotificationChannel(channel)
@@ -41,17 +37,25 @@ public class AlarmReceiver : WakefulBroadcastReceiver() {
             ?.setWhen(System.currentTimeMillis())
             ?.setAutoCancel(true)
             ?.setContentIntent(contentIntent)
-            ?.setPriority(Notification.PRIORITY_DEFAULT)
+            ?.setPriority(Notification.PRIORITY_HIGH)
+            ?.setCategory(NotificationCompat.CATEGORY_REMINDER)
             ?.setDefaults(Notification.DEFAULT_ALL)
+            ?.setFullScreenIntent(contentIntent,true)
 
 
         if (notman != null) {
             if (notificationId != null) {
                 if (builder != null) {
-                    notman.notify(notificationId,builder.build())
+                    notman.notify(x,builder.build())
                 }
             }
         }
 
+
     }
+    fun generateRandom(): Int {
+        val random = Random()
+        return random.nextInt(9999 - 1000) + 1000
+    }
+
 }
