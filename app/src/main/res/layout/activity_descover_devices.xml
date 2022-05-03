@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:padding="20dp"
+    tools:context=".DescoverDevicesActivity">
+
+    <Button
+        android:id="@+id/DescoverBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Discover Devices"
+        android:layout_centerHorizontal = "true" />
+    <TextView
+        android:id = "@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DescoverBtn" />
+
+    <ListView
+        android:id="@+id/list_view_descover"
+        android:layout_width="wrap_content"
+        android:layout_height="329dp"
+        android:layout_below="@id/status"
+        android:layout_marginTop="14dp" />
+
+    <TextView
+        android:id="@+id/receivedMsg"
+        style="@style/TextAppearance.MaterialComponents.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/messTil"
+        android:layout_marginBottom="32dp"
+        android:layout_centerHorizontal="true"
+        android:text="Message"
+        android:textColor="@color/purple_200"
+        android:textSize="32dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/messTil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/sendBtn">
+        <EditText
+            android:id="@+id/messEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Write a message"
+            android:inputType="textLongMessage" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/sendBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp"
+
+        android:text="Send" />
+</RelativeLayout>
