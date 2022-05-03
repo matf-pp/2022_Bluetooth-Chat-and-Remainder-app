@@ -37,7 +37,7 @@ class NotificationActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         actionBar=supportActionBar!!
-        actionBar.title="Profile"
+        actionBar.title="Reminders"
 
         binding.setBtn.setOnClickListener {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

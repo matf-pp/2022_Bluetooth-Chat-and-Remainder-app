@@ -52,7 +52,7 @@
         android:layout_below="@id/notificationBtn"
         android:layout_marginTop="43dp"
         android:layout_centerHorizontal="true"
-        android:text="To connect and chat with your firends click here:"
+        android:text="To connect and chat with your friends click here:"
         android:textColor="@color/black"/>
 
     <Button

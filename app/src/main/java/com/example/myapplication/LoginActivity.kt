@@ -41,6 +41,7 @@ class LoginActivity : AppCompatActivity() {
         checkUser()
 
         binding.noAccountTv.setOnClickListener {
+
             startActivity(Intent(this,SignUpActivity::class.java))
         }
         binding.loginBtn.setOnClickListener {
