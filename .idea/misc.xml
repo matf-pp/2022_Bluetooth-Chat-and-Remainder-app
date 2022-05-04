@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ADMIN/Downloads/projekat_dizajn-master/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1395" />
+        <entry key="..\:/Users/ADMIN/Downloads/projekat_dizajn-master/app/src/main/res/drawable/ic_baseline_notifications_active_24.xml" value="0.1395" />
+        <entry key="..\:/Users/ADMIN/Downloads/projekat_dizajn-master/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1395" />
+        <entry key="..\:/Users/ADMIN/Downloads/projekat_dizajn-master/app/src/main/res/layout/activity_chat.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/ADMIN/Downloads/projekat_dizajn-master/app/src/main/res/layout/activity_device_list.xml" value="0.23097826086956522" />
+        <entry key="..\:/Users/ADMIN/Downloads/projekat_dizajn-master/app/src/main/res/layout/activity_login.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/ADMIN/Downloads/projekat_dizajn-master/app/src/main/res/layout/activity_notification.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/ADMIN/Downloads/projekat_dizajn-master/app/src/main/res/layout/activity_profile.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/ADMIN/Downloads/projekat_dizajn-master/app/src/main/res/layout/activity_sign_up.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/ADMIN/Downloads/projekat_dizajn-master/app/src/main/res/layout/device_list_item.xml" value="0.20969202898550723" />
+        <entry key="..\:/Users/ADMIN/Downloads/projekat_dizajn-master/app/src/main/res/menu/menu_device_list.xml" value="0.18611111111111112" />
+        <entry key="..\:/Users/ADMIN/Downloads/projekat_dizajn-master/app/src/main/res/menu/menu_main_activity.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/ADMIN/Downloads/projekat_dizajn-master/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1945" />
+        <entry key="..\:/Users/Milan Manojlovic/AndroidStudioProjects/projekat_dizajn-master/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.173" />
+        <entry key="..\:/Users/Milan Manojlovic/AndroidStudioProjects/projekat_dizajn-master/app/src/main/res/drawable/ic_baseline_person_search.xml" value="0.173" />
+        <entry key="..\:/Users/Milan Manojlovic/AndroidStudioProjects/projekat_dizajn-master/app/src/main/res/layout/activity_chat.xml" value="0.23596014492753623" />
+        <entry key="..\:/Users/Milan Manojlovic/AndroidStudioProjects/projekat_dizajn-master/app/src/main/res/layout/activity_device_list.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/Milan Manojlovic/AndroidStudioProjects/projekat_dizajn-master/app/src/main/res/layout/activity_profile.xml" value="0.23596014492753623" />
+        <entry key="..\:/Users/Milan Manojlovic/AndroidStudioProjects/projekat_dizajn-master/app/src/main/res/layout/device_list_item.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/Milan Manojlovic/AndroidStudioProjects/projekat_dizajn-master/app/src/main/res/menu/menu_device_list.xml" value="0.3723958333333333" />
+        <entry key="..\:/Users/Milan Manojlovic/AndroidStudioProjects/projekat_dizajn-master/app/src/main/res/menu/menu_main_activity.xml" value="0.3723958333333333" />
+        <entry key="..\:/Users/Milan Manojlovic/AndroidStudioProjects/projekat_dizajn-master/app/src/main/res/menu/menu_profile_activity.xml" value="0.3723958333333333" />
+        <entry key="..\:/Users/Milan Manojlovic/AndroidStudioProjects/projekat_dizajn-master/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.173" />
+        <entry key="..\:/Users/Milan Manojlovic/AndroidStudioProjects/projekat_dizajn-master/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.173" />
+        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_notification.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.19375" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1085" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1085" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
