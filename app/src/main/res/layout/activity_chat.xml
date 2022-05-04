@@ -4,46 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_centerHorizontal="true"
-    android:padding="20dp"
     tools:context=".ChatActivity">
-
     <TextView
-        android:id="@+id/tvfriends"
-        style="@style/TextAppearance.AppCompat.Body1"
+        android:id="@+id/status"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="43dp"
-        android:layout_centerHorizontal="true"
-        android:text="To chat with your friends click here:"
-        android:textColor="@color/black"/>
+        android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/PairedBtn"
+    <ListView
+        android:id="@+id/list_conversation"
+        android:layout_marginBottom="60dp"
+        android:background="#efefef"
+        android:layout_below="@id/status"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvfriends"
-        android:layout_marginTop="37dp"
-        android:padding="5dp"
-        android:text="Chat" />
+        android:layout_height="match_parent" />
 
-    <TextView
-        android:id="@+id/addchat"
-        style="@style/TextAppearance.AppCompat.Body1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/PairedBtn"
-        android:layout_marginTop="43dp"
-        android:layout_centerHorizontal="true"
-        android:text="To make some new friends click here:"
-        android:textColor="@color/black"/>
-
-    <Button
-        android:id="@+id/DescoverBtn"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/addchat"
-        android:layout_marginTop="37dp"
-        android:padding="5dp"
-        android:text="New friends" />
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/enter_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:hint="Type a message"
+            android:layout_marginEnd="100dp" />
+
+        <Button
+            android:id = "@+id/sendBtn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:text="@string/btn_send" />
+
+    </RelativeLayout>
+
 </RelativeLayout>

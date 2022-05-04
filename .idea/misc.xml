@@ -4,9 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/ic_baseline_notifications_active_24.xml" value="0.1515" />
+        <entry key="app/src/main/res/drawable/ic_baseline_person_search.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/message_incoming.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/message_outcoming.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.14" />
         <entry key="app/src/main/res/layout/activity_chating.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_descover_devices.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_device_list.xml" value="0.1" />
@@ -15,9 +16,12 @@
         <entry key="app/src/main/res/layout/activity_paired_devices.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_profile.xml" value="0.15760869565217392" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/device_list_item.xml" value="0.13645833333333332" />
         <entry key="app/src/main/res/layout/message_incoming.xml" value="0.33" />
         <entry key="app/src/main/res/layout/message_outcoming.xml" value="0.14" />
         <entry key="app/src/main/res/layout/message_outgoing.xml" value="0.11614583333333334" />
+        <entry key="app/src/main/res/menu/menu_device_list.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/menu_main_activity.xml" value="0.1" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1085" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1085" />
       </map>

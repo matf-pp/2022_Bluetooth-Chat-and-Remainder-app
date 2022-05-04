@@ -37,10 +37,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".ChatingActivity"
+            android:name=".DeviceListActivity"
             android:exported="false" />
         <activity
-            android:name=".DeviceListActivity"
+            android:name=".ChatingActivity"
             android:exported="false" />
         <activity
             android:name=".DescoverDevicesActivity"
