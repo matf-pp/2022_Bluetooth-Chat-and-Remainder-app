@@ -20,7 +20,9 @@ Aplikacija je namenjena za uredjaje koji koriste Android operativni sistem. Za k
 # Napomene
 Pre prvog koriscenja neophodno je dozvoliti pristup lokaciji uredjaja kako bi bluetooth mogao da skenira uredjaje u blizini.  
 Prilikom koriscenja aplikacije potrebno je prihvatiti sve dozvole koje aplikacija zahteva od vas.  
-![WhatsApp Image 2022-05-17 at 6 28 50 PM(1)](https://user-images.githubusercontent.com/92429645/168862189-dad67438-4147-4c34-8f10-8c6fd19447ae.jpeg)
+
+<img src=https://user-images.githubusercontent.com/92429645/168862189-dad67438-4147-4c34-8f10-8c6fd19447ae.jpeg width="300" height="600">    <img src=https://user-images.githubusercontent.com/92429645/168862413-066da459-4732-4c70-a015-b5856df9f4a0.jpeg align width="300" height="600">
+
 Za login/signup potrebna je internet konekcija.  
 U battery saving modu vreme oglasavanja remainder-a moze odstupati par minuta od zadatog vremena.  
 
