@@ -27,7 +27,5 @@ Za login/signup potrebna je internet konekcija.
 U battery saving modu vreme oglasavanja remainder-a moze odstupati par minuta od zadatog vremena.  
 
 # Autori
-Aleksandra Biocanin
-aleksandrabiocanin6@gmail.com  
-Isidora Burmaz
-isidoraburmaz@gmail.com
+Aleksandra Biocanin aleksandrabiocanin6@gmail.com  
+Isidora Burmaz isidoraburmaz@gmail.com
