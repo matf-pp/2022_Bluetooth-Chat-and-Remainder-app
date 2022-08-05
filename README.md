@@ -1,4 +1,4 @@
-# Bluetooth Chat and Remainder app
+# Bluetooth Chat and Reminder app
 # Opis aplikacije
 Aplikacija namenjena za dopisivanje preko bluetooth-a.  
 Korisnici ove aplikacije imaju svoj nalog na kom mogu da se dopisuju sa prijateljima preko bluetooth chat-a. 
@@ -24,7 +24,7 @@ Prilikom koriscenja aplikacije potrebno je prihvatiti sve dozvole koje aplikacij
 <img src=https://user-images.githubusercontent.com/92429645/168862189-dad67438-4147-4c34-8f10-8c6fd19447ae.jpeg width="300" height="600">    <img src=https://user-images.githubusercontent.com/92429645/168862413-066da459-4732-4c70-a015-b5856df9f4a0.jpeg align width="300" height="600">
 
 Za login/signup potrebna je internet konekcija.  
-U battery saving modu vreme oglasavanja remainder-a moze odstupati par minuta od zadatog vremena.  
+U battery saving modu vreme oglasavanja reminder-a moze odstupati par minuta od zadatog vremena.  
 
 # Autori
 Aleksandra Biocanin  
